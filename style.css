@@ -5093,3 +5093,27 @@ html.dark-theme .footer-website-button:hover { background: #e52d3b; }
     .main-logo, h1 .accent, .ticker-track { animation: none !important; }
     .hero-image { transform: none; }
 }
+
+
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+main {
+    overflow-x: clip;
+}
+
+/* Свечения на телефоне не должны выходить за экран */
+@media (max-width: 700px) {
+    .hero::before,
+    .hero::after {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero::before { left: 0; }
+    .hero::after  { right: 0; }
+}
